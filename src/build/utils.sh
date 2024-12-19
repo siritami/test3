@@ -185,7 +185,7 @@ get_apk() {
 		fi
 	fi
 	export version="$version"
-    if [[ -n "$version" ]]; then
+    if [[ -f "$version" ]]; then
         version=$(echo "$version" | tr -d ' ' | sed 's/\./-/g')
         green_log "[+] Downloading $3 version: $version $5 $6 $7"
         if [[ $5 == "Bundle" ]] || [[ $5 == "Bundle_extract" ]]; then
