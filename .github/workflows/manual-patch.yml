@@ -45,9 +45,6 @@ jobs:
         uses: actions/checkout@v4.2.2
       - name: Preparing to patch
         uses: ./.github/actions/preparing
-      - name: Check github connection
-        id: check-gh-rv
-        run: bash src/etc/connection.sh
       - name: Patch apk
         id: patch-rv
         if: steps.check-gh-rv.outputs.internet_error == '0'
