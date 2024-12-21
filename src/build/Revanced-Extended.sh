@@ -1,6 +1,4 @@
 #!/bin/bash
-# Revanced Extended build
-#!/bin/bash
 
 mkdir ./release ./download
 
