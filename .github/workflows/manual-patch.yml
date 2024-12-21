@@ -134,9 +134,10 @@ jobs:
         run: [1, 2, 3]
     container:
       image: ubuntu:20.04
+      options: --user root
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v2
       - name: Preparing to patch
         uses: ./.github/actions/preparing
       - name: Check github connection
